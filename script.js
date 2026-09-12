@@ -1,8 +1,8 @@
-const WHATSAPP_NUMBER = "50700000000";
+const WHATSAPP_NUMBER = "50769275725";
 
 const products = [
   {id:"classic", name:"Hotdog Clásico", category:"hotdogs", price:1.25, desc:"Salchicha, pan suave y nuestras salsas clásicas.", emoji:"🌭", featured:true, badge:"CLÁSICO"},
-  {id:"special", name:"Hotdog Doble Salchicha", category:"hotdogs", price:3.50, desc:"Salchicha, queso, toppings y salsas de la casa.", emoji:"🌭", featured:true, badge:"MÁS VENDIDO"},
+  {id:"special", name:"Hotdog Doble Salchicha", category:"hotdogs", price:1.75, desc:"Salchicha, queso, toppings y salsas de la casa.", emoji:"🌭", featured:true, badge:"MÁS VENDIDO"},
   {id:"bbq", name:"PANDOG BBQ", category:"hotdogs", price:3.75, desc:"Sabor BBQ, toppings crujientes y salsa especial.", emoji:"🌭", featured:true},
   {id:"combo-special", name:"Combo Especial", category:"combos", price:5.50, desc:"PANDOG Especial + papas + bebida.", emoji:"🍽️", featured:true, badge:"COMBO"},
   {id:"combo-classic", name:"Combo Clásico", category:"combos", price:4.50, desc:"PANDOG Clásico + papas + bebida.", emoji:"🍟"},
