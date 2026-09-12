@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PANDOG — Lo mejor en Hot Dog. Mira nuestro menú y realiza tu pedido por WhatsApp.">
+  <title>PANDOG | Lo mejor en Hot Dog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="PANDOG inicio">
+      <img src="logo.png" alt="Logo PANDOG">
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#combos">Combos</a>
+      <a href="#como-pedir">Cómo pedir</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+
+    <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+      <span>🛒</span>
+      <span>Pedido</span>
+      <b id="cartCount">0</b>
+    </button>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">PANDOG • LO MEJOR EN HOT DOG</p>
+        <h1>EL ANTOJO<br><span>QUE MERECES.</span></h1>
+        <p class="hero-text">
+          Hot dogs cargados de sabor, combos irresistibles y pedidos fáciles.
+          Elige tus favoritos y mándanos tu pedido por WhatsApp.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">VER MENÚ <span>→</span></a>
+          <button class="btn btn-outline" id="heroOrder">PEDIR AHORA</button>
+        </div>
+        <div class="hero-notes">
+          <span>🔥 Recién preparados</span>
+          <span>⚡ Pedido rápido</span>
+          <span>💸 Precios estudiantiles</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="burst">¡ÑAM!</div>
+        <div class="hotdog-illustration">
+          <div class="sausage"></div>
+          <div class="bun bun-top"></div>
+          <div class="toppings">•••</div>
+          <div class="bun bun-bottom"></div>
+        </div>
+        <div class="price-tag">
+          <small>DESDE</small>
+          <strong>$2.50</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section favorites">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LO MÁS PEDIDO</p>
+          <h2>FAVORITOS DE <span>PANDOG</span></h2>
+        </div>
+        <a href="#menu" class="text-link">Ver todo →</a>
+      </div>
+      <div class="product-grid" id="featuredProducts"></div>
+    </section>
+
+    <section class="promo">
+      <div class="promo-copy">
+        <p class="eyebrow">OFERTA ESPECIAL</p>
+        <h2>ARMA TU<br><span>COMBO.</span></h2>
+        <p>Tu PANDOG favorito + acompañamiento + bebida. Todo en un solo pedido.</p>
+        <a href="#combos" class="btn btn-light">VER COMBOS →</a>
+      </div>
+      <div class="promo-sticker">🔥<br><small>COMBO</small></div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading centered">
+        <p class="eyebrow">ELIGE TU FAVORITO</p>
+        <h2>NUESTRO <span>MENÚ</span></h2>
+        <p>Agrega lo que quieras al pedido. El total se calcula automáticamente.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="todos">Todos</button>
+        <button class="filter" data-category="hotdogs">Hot Dogs</button>
+        <button class="filter" data-category="combos">Combos</button>
+        <button class="filter" data-category="papas">Papas</button>
+        <button class="filter" data-category="bebidas">Bebidas</button>
+      </div>
+
+      <div class="product-grid menu-grid" id="menuProducts"></div>
+    </section>
+
+    <section class="builder section" id="combos">
+      <div class="builder-copy">
+        <p class="eyebrow">PANDOG A TU MANERA</p>
+        <h2>ARMA TU<br><span>COMBO.</span></h2>
+        <p>Selecciona una opción de cada categoría y agrega el combo directamente a tu pedido.</p>
+      </div>
+
+      <div class="builder-card">
+        <div class="builder-step">
+          <span>01</span>
+          <div>
+            <h3>Elige tu PANDOG</h3>
+            <div class="choice-row" id="dogChoices"></div>
+          </div>
+        </div>
+        <div class="builder-step">
+          <span>02</span>
+          <div>
+            <h3>Elige tu acompañamiento</h3>
+            <div class="choice-row" id="sideChoices"></div>
+          </div>
+        </div>
+        <div class="builder-step">
+          <span>03</span>
+          <div>
+            <h3>Elige tu bebida</h3>
+            <div class="choice-row" id="drinkChoices"></div>
+          </div>
+        </div>
+        <div class="builder-total">
+          <div><small>TOTAL DEL COMBO</small><strong id="builderTotal">$0.00</strong></div>
+          <button class="btn btn-primary" id="addCombo">AGREGAR COMBO</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps section" id="como-pedir">
+      <div class="section-heading centered">
+        <p class="eyebrow">SIMPLE Y RÁPIDO</p>
+        <h2>¿CÓMO <span>PEDIR?</span></h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card">
+          <b>01</b><div class="step-icon">🌭</div>
+          <h3>ELIGE</h3><p>Escoge tus productos favoritos del menú.</p>
+        </article>
+        <article class="step-card">
+          <b>02</b><div class="step-icon">🛒</div>
+          <h3>CONFIRMA</h3><p>Revisa cantidades y el total de tu pedido.</p>
+        </article>
+        <article class="step-card">
+          <b>03</b><div class="step-icon">📲</div>
+          <h3>ENVÍA</h3><p>Presiona el botón y tu pedido se abrirá en WhatsApp.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section" id="nosotros">
+      <div class="about-logo"><img src="logo.png" alt="PANDOG"></div>
+      <div>
+        <p class="eyebrow">NUESTRO NEGOCIO</p>
+        <h2>HECHO PARA<br><span>EL ANTOJO.</span></h2>
+        <p>
+          PANDOG es un emprendimiento escolar creado para ofrecer comida rápida,
+          accesible y deliciosa. Queremos que pedir sea tan fácil como disfrutar.
+        </p>
+        <div class="info-row">
+          <div><strong>📍</strong><span>Tu punto de venta<br><small>Completa esta información</small></span></div>
+          <div><strong>🕐</strong><span>Horario<br><small>Completa esta información</small></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="logo.png" alt="PANDOG"></div>
+    <p>LO MEJOR EN HOT DOG</p>
+    <div class="footer-links">
+      <a href="#menu">Menú</a><a href="#combos">Combos</a><a href="#como-pedir">Cómo pedir</a>
+    </div>
+    <small>© 2026 PANDOG. Emprendimiento escolar.</small>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cart">
+    <div class="cart-head">
+      <div><p class="eyebrow">TU PEDIDO</p><h2>CARRITO</h2></div>
+      <button id="closeCart" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">
+      <span>🌭</span>
+      <h3>Tu carrito está vacío</h3>
+      <p>Agrega algo delicioso para comenzar.</p>
+      <button class="btn btn-primary" id="goMenu">VER MENÚ</button>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>TOTAL</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="whatsapp-btn" id="sendWhatsApp">📲 ENVIAR PEDIDO POR WHATSAPP</button>
+      <small>Reemplaza el número de WhatsApp en <b>script.js</b>.</small>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
