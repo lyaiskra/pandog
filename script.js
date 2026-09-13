@@ -6,7 +6,7 @@ const products = [
   {id:"combo-1", name:"Combo #1", category:"combos", price:2.00, desc:"Hotdog Clásico + soda.", emoji:"🍽️",featured:true, badge:"COMBO"},
   {id:"combo-2", name:"Combo #2", category:"combos", price:2.25, desc:"Hotdog Doble Salchicha + soda.", emoji:"🍽️", featured:true, badge:"COMBO"},
   {id:"combo-3", name:"Combo #3", category:"combos", price:2.50, desc:"Hotdog + papas + soda.", emoji:"🍽️",featured:true, badge:"COMBO"},
-  {id:"combo-4", name:"Combo #4", category:"combos", price:3.00, desc:"Hotdog Clásico + papas con queso + soda.", emoji:"🍽️",featured:true, badge:"COMBO"},
+  {id:"combo-4", name:"Combo #4", category:"combos", price:3.00, desc:"Hotdog + papas con queso + soda.", emoji:"🍽️",featured:true, badge:"COMBO"},
   {id:"fries", name:"Papas Fritas", category:"papas", price:0.50, desc:"Papas crujientes, perfectas para acompañar.", emoji:"🍟",featured:true, badge:"PAPAS"},
   {id:"cheese-fries", name:"Papas con Queso", category:"papas", price:1.00, desc:"Papas crujientes con queso cremoso.", emoji:"🧀",featured:true, badge:"PAPAS"},
   {id:"donuts", name:"Donas", category:"postre", price:1.00, desc:"Donas esponjosas y deliciosas.", emoji:"🍩",featured:true, badge:"POSTRE"},
@@ -135,9 +135,9 @@ document.querySelectorAll(".nav a").forEach(a=>a.addEventListener("click",()=> $
 
 // Constructor de combo
 const builder = {
-  dog: {name:"PANDOG Clásico", price:2.50},
-  side: {name:"Papas Fritas", price:1.50},
-  drink: {name:"Soda", price:1.00}
+  dog: {name:"Hotdog Clásico", price:1.25},
+  side: {name:"Papas Fritas", price:0.50},
+  drink: {name:"Soda", price:0.50}
 };
 function choice(container, options, key){
   $(container).innerHTML = options.map((o,i)=>
@@ -166,13 +166,13 @@ $("addCombo").addEventListener("click",()=>{
 });
 
 choice("dogChoices",[
-  {name:"Clásico",price:2.50},{name:"Especial",price:3.50},{name:"BBQ",price:3.75}
+  {name:"Clásico",price:1.25},{name:"Especial",price:1.50}
 ],"dog");
 choice("sideChoices",[
-  {name:"Papas",price:1.50},{name:"Papas + queso",price:2.25}
+  {name:"Papas",price:0.50},{name:"Papas + queso",price:1.00}
 ],"side");
 choice("drinkChoices",[
-  {name:"Soda",price:1.00},{name:"Jugo",price:1.50},{name:"Agua",price:.75}
+  {name:"Soda",price:0.50}
 ],"drink");
 updateBuilderTotal();
 
