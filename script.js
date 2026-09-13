@@ -9,6 +9,7 @@ const products = [
   {id:"combo-4", name:"Combo #4", category:"combos", price:3.00, desc:"Hotdog Clásico + papas con queso + soda.", emoji:"🍟"},
   {id:"fries", name:"Papas Fritas", category:"papas", price:0.50, desc:"Papas crujientes, perfectas para acompañar.", emoji:"🍟"},
   {id:"cheese-fries", name:"Papas con Queso", category:"papas", price:1.00, desc:"Papas crujientes con queso cremoso.", emoji:"🧀"},
+  {id:"donuts", name:"Donas", category:"postre", price:1.00, desc:"Donas esponjosas y deliciosas.", emoji:"🍩"},
   {id:"soda", name:"Soda", category:"bebidas", price:0.50, desc:"Elige tu sabor disponible en el punto de venta.", emoji:"🥤"},
   {id:"juice", name:"Jugo Natural", category:"bebidas", price:1.50, desc:"Bebida refrescante para acompañar tu PANDOG.", emoji:"🧃"},
   {id:"water", name:"Agua", category:"bebidas", price:0.75, desc:"Agua fría.", emoji:"💧"}
