@@ -3,16 +3,15 @@ const WHATSAPP_NUMBER = "50769275725";
 const products = [
   {id:"classic", name:"Hotdog Clásico", category:"hotdogs", price:1.25, desc:"Salchicha, pan suave y nuestras salsas clásicas.", emoji:"🌭", featured:true, badge:"CLÁSICO"},
   {id:"special", name:"Hotdog Doble Salchicha", category:"hotdogs", price:1.50, desc:"Salchicha, toppings y salsas de la casa.", emoji:"🌭", featured:true, badge:"MÁS VENDIDO"},
-  {id:"combo-1", name:"Combo #1", category:"combos", price:2.00, desc:"Hotdog Clásico + soda.", emoji:"🍟"},
+  {id:"combo-1", name:"Combo #1", category:"combos", price:2.00, desc:"Hotdog Clásico + soda.", emoji:"🍽️"},
   {id:"combo-2", name:"Combo #2", category:"combos", price:2.25, desc:"Hotdog Doble Salchicha + soda.", emoji:"🍽️", featured:true, badge:"COMBO"},
-  {id:"combo-3", name:"Combo #3", category:"combos", price:2.50, desc:"Hotdog + papas + soda.", emoji:"🍟"},
-  {id:"combo-4", name:"Combo #4", category:"combos", price:3.00, desc:"Hotdog Clásico + papas con queso + soda.", emoji:"🍟"},
+  {id:"combo-3", name:"Combo #3", category:"combos", price:2.50, desc:"Hotdog + papas + soda.", emoji:"🍽️"},
+  {id:"combo-4", name:"Combo #4", category:"combos", price:3.00, desc:"Hotdog Clásico + papas con queso + soda.", emoji:"🍽️"},
   {id:"fries", name:"Papas Fritas", category:"papas", price:0.50, desc:"Papas crujientes, perfectas para acompañar.", emoji:"🍟"},
   {id:"cheese-fries", name:"Papas con Queso", category:"papas", price:1.00, desc:"Papas crujientes con queso cremoso.", emoji:"🧀"},
   {id:"donuts", name:"Donas", category:"postre", price:1.00, desc:"Donas esponjosas y deliciosas.", emoji:"🍩"},
+  {id:"cookies", name:"Galletas", category:"postre", price:0.50, desc:"Galletas crujientes y deliciosas.", emoji:"🍪"},
   {id:"soda", name:"Soda", category:"bebidas", price:0.50, desc:"Elige tu sabor disponible en el punto de venta.", emoji:"🥤"},
-  {id:"juice", name:"Jugo Natural", category:"bebidas", price:1.50, desc:"Bebida refrescante para acompañar tu PANDOG.", emoji:"🧃"},
-  {id:"water", name:"Agua", category:"bebidas", price:0.75, desc:"Agua fría.", emoji:"💧"}
 ];
 
 let cart = JSON.parse(localStorage.getItem("pandogCart") || "[]");
