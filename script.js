@@ -2,10 +2,11 @@ const WHATSAPP_NUMBER = "50769275725";
 
 const products = [
   {id:"classic", name:"Hotdog Clásico", category:"hotdogs", price:1.25, desc:"Salchicha, pan suave y nuestras salsas clásicas.", emoji:"🌭", featured:true, badge:"CLÁSICO"},
-  {id:"special", name:"Hotdog Doble Salchicha", category:"hotdogs", price:1.75, desc:"Salchicha, queso, toppings y salsas de la casa.", emoji:"🌭", featured:true, badge:"MÁS VENDIDO"},
-  {id:"bbq", name:"PANDOG BBQ", category:"hotdogs", price:3.75, desc:"Sabor BBQ, toppings crujientes y salsa especial.", emoji:"🌭", featured:true},
-  {id:"combo-special", name:"Combo Especial", category:"combos", price:5.50, desc:"PANDOG Especial + papas + bebida.", emoji:"🍽️", featured:true, badge:"COMBO"},
-  {id:"combo-classic", name:"Combo Clásico", category:"combos", price:4.50, desc:"PANDOG Clásico + papas + bebida.", emoji:"🍟"},
+  {id:"special", name:"Hotdog Doble Salchicha", category:"hotdogs", price:1.50, desc:"Salchicha, toppings y salsas de la casa.", emoji:"🌭", featured:true, badge:"MÁS VENDIDO"},
+  {id:"combo-1", name:"Combo #1", category:"combos", price:2.00, desc:"Hotdog Clásico + soda.", emoji:"🍟"},
+  {id:"combo-2", name:"Combo #2", category:"combos", price:2.25, desc:"Hotdog Doble Salchicha + soda.", emoji:"🍽️", featured:true, badge:"COMBO"},
+  {id:"combo-3", name:"Combo #3", category:"combos", price:2.50, desc:"Hotdog + papas + soda.", emoji:"🍟"},
+  {id:"combo-4", name:"Combo #4", category:"combos", price:3.00, desc:"Hotdog Clásico + papas con queso + soda.", emoji:"🍟"},
   {id:"fries", name:"Papas Fritas", category:"papas", price:1.50, desc:"Papas crujientes, perfectas para acompañar.", emoji:"🍟"},
   {id:"cheese-fries", name:"Papas con Queso", category:"papas", price:2.25, desc:"Papas crujientes con queso cremoso.", emoji:"🧀"},
   {id:"soda", name:"Soda", category:"bebidas", price:1.00, desc:"Elige tu sabor disponible en el punto de venta.", emoji:"🥤"},
